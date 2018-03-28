@@ -12,13 +12,11 @@ Feature: Login to my Calendar
 
 
  Scenario: Login with invalid Email credentials
-   Given I am on the Google Calendar login page
     When I fill in e-mail with "test@gmail.com"
     Then I should see error message
 
 
  Scenario: Login with invalid Password credentials
-  Given I am on the Google Calendar login page
    When I fill in e-mail with "apptestautomation7@gmail.com"
    And I fill in Password with "Night"
   Then I should see error message
