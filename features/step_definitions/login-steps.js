@@ -3,6 +3,8 @@
 var {defineSupportCode} = require('cucumber');
 var {By, until, Key} = require('selenium-webdriver');
 var {expect} = require('chai');
+var {assert} = require('chai');
+
 
 defineSupportCode(function({When, Then, And}) {
 
@@ -35,6 +37,16 @@ defineSupportCode(function({When, Then, And}) {
     usernameField.getAttribute('aria-label')
       .then(function(element) {
         expect(element).to.include('Test Test');
+        next();
+      });
+  });
+
+  Then(/^I should see error message$/, function (next) {
+    this.driver.wait(until.elementLocated(By.css('div.dEOOab.RxsGPe')));
+    var errorField = this.driver.findElement(By.css('div.dEOOab.RxsGPe'));
+    errorField.getAttribute('aria-live')
+      .then(function(element) {
+        assert.equal(element, "assertive");
         next();
       });
   });
