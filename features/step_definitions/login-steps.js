@@ -6,7 +6,7 @@ var {expect} = require('chai');
 var {assert} = require('chai');
 
 
-defineSupportCode(function({When, Then, And}) {
+defineSupportCode(function({When, Then}) {
 
   When(/^I fill in e-mail with "([^"]*)"$/, function (userEmail, next) {
     this.driver.get('https://calendar.google.com/calendar');
