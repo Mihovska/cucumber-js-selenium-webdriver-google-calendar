@@ -37,22 +37,19 @@ Which should first use jshint to lint the step definitions (options are specifie
     Running "exec:run_cucumber_tests" (exec) task
 
     Feature: Login to my Calendar
+
       In order to use my calendar
-       As a registered user
-       I want to sign in to my Google Calendar
-       So that I can check events and meetings
+      As a registered user
+      I want to sign in to my Google Calendar
+      So that I can check events and meetings
 
-
-      Scenario: Login with valid credentials                       # features/login.feature:6
-        Given I am on the Google Calendar login page               # features/login.feature:7
-         When I fill in "Email" with "apptestautomation7@gmail.com" # features/login.feature:8
-        And I press "Next"                                         # features/login.feature:9
-        And I fill in "Password" with "Nighthawk_f22"              # features/login.feature:10
-        And I press "Next"                                         # features/login.feature:11
-        Then I should be redirected to my profile page             # features/login.feature:12
+   Scenario: Login with valid credentials                         # features/login.feature:6
+    ✔ When I fill in e-mail with "apptestautomation7@gmail.com"   # features/login.feature:7
+    ✔ When I fill in Password with "Nighthawk_f22"                # features/login.feature:8
+    ✔ Then I should be redirected to my profile page              # features/login.feature:9
 
 
     1 scenario (1 passed)
-    6 steps (6 passed)
+    3 steps (3 passed)
 
     Done, without errors.
