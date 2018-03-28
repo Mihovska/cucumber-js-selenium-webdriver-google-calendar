@@ -7,7 +7,7 @@ Feature: Login to my Calendar
 
  Scenario: Login with valid credentials
    When I fill in e-mail with "apptestautomation7@gmail.com"
-   And I fill in Password with "Nighthawk_f22"
+   When I fill in Password with "Nighthawk_f22"
    Then I should be redirected to my profile page
 
 
