@@ -1,20 +1,28 @@
 'use strict';
 
-const webdriver = require('selenium-webdriver');
 var {defineSupportCode} = require('cucumber');
 var {Builder, By, until} = require('selenium-webdriver');
 var fs = require('fs');
 var platform = process.env.PLATFORM || "CHROME";
 
-const chromeCapabilities = webdriver.Capabilities.chrome();
-chromeCapabilities.set('chromeOptions', {args: ['--headless']});
+
+var buildChromeDriver = function() {
+  return new Builder().forBrowser("chrome").build();
+};
+
+var buildFirefoxDriver = function() {
+    return new Builder().forBrowser("firefox").build();
+};
 
 var buildDriver = function() {
-  return new webdriver.Builder()
-  .forBrowser("chrome")
-  .withCapabilities(chromeCapabilities)
-  .build();
+  switch(platform) {
+    case 'FIREFOX':
+      return buildFirefoxDriver();
+    default:
+      return buildChromeDriver();
+  }
 };
+
 
 defineSupportCode(function({setDefaultTimeout}) {
     setDefaultTimeout(60 * 1000);
