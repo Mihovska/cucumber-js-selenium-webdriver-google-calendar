@@ -18,5 +18,5 @@ Feature: Login to my Calendar
 
  Scenario: Login with invalid Password credentials
    When I fill in e-mail with "apptestautomation7@gmail.com"
-   And I fill in Password with "Night"
-  Then I should see error message
+   When I fill in Password with "Night"
+   Then I should see error message
