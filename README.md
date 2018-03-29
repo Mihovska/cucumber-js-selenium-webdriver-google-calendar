@@ -34,9 +34,7 @@ Which should first use jshint to lint the step definitions (options are specifie
     Running "jshint:files" (jshint) task
     >> 4 files lint free.
 
-
     Running "exec:run_cucumber_tests" (exec) task
-
 
     Feature: Login to my Calendar
 
