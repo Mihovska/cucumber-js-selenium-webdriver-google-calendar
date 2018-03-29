@@ -30,6 +30,7 @@ Note that you'll need to install nodeJS from the official website: https://nodej
 
 Which should first use jshint to lint the step definitions (options are specified in the Gruntfile.js), and then run the tests, producing output that looks something like:
 
+```
     [me@computer cucumber-js-selenium-webdriver-google-calendar]$ grunt
     Running "jshint:files" (jshint) task
     >> 4 files lint free.
@@ -53,3 +54,4 @@ Which should first use jshint to lint the step definitions (options are specifie
     3 steps (3 passed)
 
     Done, without errors.
+    ```
