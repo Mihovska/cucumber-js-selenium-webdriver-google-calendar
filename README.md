@@ -34,7 +34,9 @@ Which should first use jshint to lint the step definitions (options are specifie
     Running "jshint:files" (jshint) task
     >> 4 files lint free.
 
+
     Running "exec:run_cucumber_tests" (exec) task
+
 
     Feature: Login to my Calendar
 
@@ -43,10 +45,10 @@ Which should first use jshint to lint the step definitions (options are specifie
       I want to sign in to my Google Calendar
       So that I can check events and meetings
 
-   Scenario: Login with valid credentials                         # features/login.feature:6
-    ✔ When I fill in e-mail with "apptestautomation7@gmail.com"   # features/login.feature:7
-    ✔ When I fill in Password with "Nighthawk_f22"                # features/login.feature:8
-    ✔ Then I should be redirected to my profile page              # features/login.feature:9
+   Scenario: Login with valid credentials                         #features/login.feature:6
+    ✔ When I fill in e-mail with "apptestautomation7@gmail.com"   #features/login.feature:7
+    ✔ When I fill in Password with "Nighthawk_f22"                #features/login.feature:8
+    ✔ Then I should be redirected to my profile page              #features/login.feature:9
 
 
     1 scenario (1 passed)
